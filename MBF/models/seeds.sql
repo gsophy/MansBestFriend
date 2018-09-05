@@ -1,4 +1,4 @@
-USE testdb;
+use exampledb;
 
 INSERT INTO Owner (name) VALUES
 ("Ayanna"),
