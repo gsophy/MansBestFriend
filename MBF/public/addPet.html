@@ -4,7 +4,7 @@
 	<meta charset = "UTF-8">
 	<title>Man's Best Friend</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
@@ -13,9 +13,9 @@
 	<div class = "container">
 		<div class = "jumbotron">
 		<h1>Man's Best Friend</h1>
-		<a href = "/viewPets" class = "btn btn-danger btn-md">
+		<a href = "../public/???.html" class = "btn btn-danger btn-md">
 		<span class = "fa fa-eye"></span>View All Pets</a>
-		<a href = "/viewPetJournal" class = "btn btn-danger btn-md"><span class ="fa fa-th-list"></span>View Pet Journal</a>
+		<a href = "../public/???.html" class = "btn btn-danger btn-md"><span class ="fa fa-th-list"></span>View Pet Journal</a>
 	</div>
 
 	<div class = "row">
@@ -24,25 +24,27 @@
 
 			<div class = "card">
 				<div class = "card-header">
-				<h3 class = "card-title"><strong>Add Pet Journal Entry</strong></h3>
+				<h3 class = "card-title"><strong>Add A Pet</strong></h3>
 			</div>
 
 		<div class = "card-body">
-		<form action = "../models/entry.js" method = "POST" role = "form">
+			<form action = "/api/pets" method = "POST" role = "form">
 
 			<div class = "form-group">
-				<label for = ""> Name</label>
+				<label for = "">Name</label>
 				<input type = "text"class="form-control" id = "name" placeholder = "Pet Name">
 			</div>
-
+			
 			<div class = "form-group">
-				<label for = "log">Log</label>
-				<textarea class="form-control" type="text columns="60" rows="3" id = "name" placeholder = "Enter Pet Journal Info Here"></textarea>
+				<label for = "">Age</label>
+				<input type = "text"class="form-control" id = "name" placeholder = "Pet Age">
+            </div>
+            
+            <div class = "form-group">
+				<label for = "">Type</label>
+				<input type = "text"class="form-control" id = "name" placeholder = "Pet Type">
 			</div>
-		
-		<div class = "text-left">
-			<button type = "submit" class = "btn btn-primary btn-md" id = "add-btn"><span class = "fas fa-journal-whills"> </span> Add an Pet Journal Entry</button>
-		</div>
-		</form>
+			
+			<button type="submit" class="btn btn-success submit btn-lg">Submit</button>
 </body>
 </html>
