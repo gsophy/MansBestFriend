@@ -2,12 +2,12 @@ module.exports = function(sequelize, DataTypes) {
   var Entry = sequelize.define("Entry", {
     log: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: false
     },
     date: {
       type: DataTypes.DATE,
-      allowNull: false,
-    },
+      allowNull: false
+    }
   });
 
   Entry.associate = function(models) {

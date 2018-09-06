@@ -2,15 +2,15 @@ module.exports = function(sequelize, DataTypes) {
   var Pet = sequelize.define("Pet", {
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     age: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: false
     },
     type: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
   });
 
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
     // A Pet can't be created without an Owner due to the foreign key constraint
     Pet.belongsTo(models.Owner, {
       foreignKey: {
-        allowNull: false,
+        allowNull: false
       },
     });
     // Associating a Pet with an Entry

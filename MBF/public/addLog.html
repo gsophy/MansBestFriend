@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Man's Best Friend</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "jumbotron">
+		<h1>Man's Best Friend</h1>
+		<a href = "../public/???.html" class = "btn btn-danger btn-md">
+		<span class = "fa fa-eye"></span>Pet Journal Entries</a>
+		<a href = "../public/???.html" class = "btn btn-danger btn-md"><span class ="fa fa-th-list"></span>View Pet Info</a>
+		</div>
+
+	<div class = "row">
+
+		<div class = "col-lg-12">
+
+			<div class = "card">
+				<div class = "card-header">
+				<h3 class = "card-title"><strong>Add Pet Journal Entry</strong></h3>
+				</div>
+
+				<div class = "card-body">
+				<form action = "/api/entrys" method = "POST" role = "form">
+
+				<div class = "form-group">
+					<label for = "log">Log</label>
+					<textarea class="form-control" type="text columns="30" rows="10"id = "name" placeholder = ""></textarea>
+				</div>
+				
+            	<div class = "form-group">
+					<label for = "Date">Date</label>
+					<input type = "text"class="form-control" id = "name" placeholder = "">
+				</div>
+			
+				<button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
