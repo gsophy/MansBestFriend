@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     type: {
       type: DataTypes.STRING,
       allowNull: false
-    },
+    }
   });
 
   Pet.associate = function(models) {
@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     Pet.belongsTo(models.Owner, {
       foreignKey: {
         allowNull: false
-      },
+      }
     });
     // Associating a Pet with an Entry
     // We're saying that a Pet can have many Entries / logs.

@@ -6,6 +6,7 @@
 // =============================================================
 
 // Requiring our modelsvar db = require("../models");
+var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/owners", function(req, res) {
@@ -57,10 +58,8 @@ module.exports = function(app) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Pet
-    db.Pets.findAll({
-      where: query,
-      include: [db.Owner]
-    }).then(function(dbPet) {
+    console.log(db);
+    db.Pet.findAll({}).then(function(dbPet) {
       res.json(dbPet);
     });
   });
@@ -82,6 +81,7 @@ module.exports = function(app) {
 
   // POST route for saving a new pet
   app.post("/api/pets", function(req, res) {
+    console.log(req.body);
     db.Pet.create(req.body).then(function(dbPet) {
       res.json(dbPet);
     });
@@ -100,18 +100,16 @@ module.exports = function(app) {
 
   // PUT route for updating pets
   app.put("/api/pets", function(req, res) {
-    db.Pet.update(
-      req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      }).then(function(dbPet) {
+    db.Pet.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbPet) {
       res.json(dbPet);
     });
   });
   // GET route for getting all of the logs/entries
-  app.get("/api/entrys", function(req, res) {
+  app.get("/api/entries", function(req, res) {
     var query = {};
     if (req.query.pet_id) {
       query.LogId = req.query.pet_id;
@@ -119,7 +117,7 @@ module.exports = function(app) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Pet
-    db.Entrys.findAll({
+    db.Entry.findAll({
       where: query,
       include: [db.Pet]
     }).then(function(dbPet) {
@@ -128,14 +126,14 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new log
-  app.post("/api/entrys", function(req, res) {
+  app.post("/api/entries", function(req, res) {
     db.Entry.create(req.body).then(function(dbEntry) {
       res.json(dbEntry);
     });
   });
 
   // DELETE route for deleting logs
-  app.delete("/api/entrys/:id", function(req, res) {
+  app.delete("/api/entries/:id", function(req, res) {
     db.Entry.destroy({
       where: {
         id: req.params.id
@@ -145,4 +143,3 @@ module.exports = function(app) {
     });
   });
 };
-

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Owner = sequelize.define("Owner", {
-  // Giving the Owner model a name of type STRING
+    // Giving the Owner model a name of type STRING
     name: DataTypes.STRING
   });
 
