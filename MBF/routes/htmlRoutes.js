@@ -13,12 +13,12 @@ module.exports = function(app) {
 
   // index route loads index.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/index.Allison.html"));
   });
 
   // route loads an html
-  app.get("/addPetEntry", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/addPetEntry.html"));
+  app.get("/addPet", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/addPet.html"));
   });
 
   // route loads an html
@@ -27,7 +27,7 @@ module.exports = function(app) {
   });
 
   // route loads an html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/???.html"));
-  });
+  // app.get("/", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/???.html"));
+  // });
 };
