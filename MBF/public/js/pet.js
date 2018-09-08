@@ -22,9 +22,17 @@ $(document).ready(function() {
       }
       // Calling the upsertAuthor function and passing in the value of the name input
       upsertPet({
-        name: nameInput,
-        age: ageInput,
+        name: nameInput
+            .val()
+            .trim()
+        ,
+        age: ageInput
+            .val()
+            .trim()
+        ,
         type: typeInput
+            .val()
+            .trim(),
       });
     }
   
@@ -39,9 +47,10 @@ $(document).ready(function() {
       var newTr = $("<tr>");
       newTr.data("pet", petData);
       newTr.append("<td>" + petData.name + "</td>");
-      newTr.append("<td> " + petData.Posts.length + "</td>");
-      newTr.append("<td><a href='../public/logs.html" + petData.id + "'>Go to Posts</a></td>");
-      newTr.append("<td><a href='../public/addLog.html" + petData.id + "'>Create a Post</a></td>");
+      newTr.append("<td>" + petData.age + "</td>");
+      newTr.append("<td>" + petData.type + "</td>");
+      newTr.append("<td><a href='/logs.html'>Go to Posts</a></td>");
+      newTr.append("<td><a href='/addLog.html'>Create a Post</a></td>");
       newTr.append("<td><a style='cursor:pointer;color:red' class='delete-pet'>Delete Pet</a></td>");
       return newTr;
     }
@@ -52,6 +61,8 @@ $(document).ready(function() {
         var rowsToAdd = [];
         for (var i = 0; i < data.length; i++) {
           rowsToAdd.push(createPetRow(data[i]));
+
+          console.log("this is data" + data[i])
         }
         renderPetList(rowsToAdd);
         nameInput.val("");

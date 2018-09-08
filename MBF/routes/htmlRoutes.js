@@ -26,8 +26,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/addLog.html"));
   });
 
-  // route loads an html
-  // app.get("/", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/???.html"));
-  // });
+  app.get("/logs", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/logs.html"));
+  });
 };
