@@ -33,13 +33,13 @@
 							<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item disabled">
-							<a class="nav-link disabled" href="#">Add Pet</a>
+							<a class="nav-link" href="/addPet">Add Pet</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="/addLog">Add Log</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/logs">View Journal</a>
+							<a class="nav-link disabled" href="/logs">View Journal</a>
 					</li>
 				</ul>
 			</div>
@@ -47,46 +47,15 @@
 		<!-- navbar closed -->
 
 	<div class = "row">
-
-		<div class = "col-lg-12">
-
-			<div class = "card">
-				<div class = "card-header">
-				<h3 class = "card-title"><strong>Add A Pet</strong></h3>
-			</div>
-
-		<div class = "card-body">
-			<form action = "/api/pets" method = "POST" role = "form" id="pet-form">
-
-			<div class = "form-group">
-				<label for = "">Name</label>
-				<input type = "text"class="form-control" id = "petName" placeholder = "Pet Name">
-			</div>
-			
-			<div class = "form-group">
-				<label for = "">Age</label>
-				<input type = "text"class="form-control" id = "petAge" placeholder = "Pet Age">
-            </div>
-            
-            <div class = "form-group">
-				<label for = "">Type</label>
-				<input type = "text"class="form-control" id = "petType" placeholder = "Pet Type">
-			</div>
-			
-			<button type="submit" class="btn btn-success submit btn-lg">Submit</button>
-		</form>
-		</div>
-		<div class="pet-container">
-				<h1>Pets</h1>
+		<div class="log-container">
+				<h1>Logs</h1>
 				<table class="table table-striped">
 					<thead>
 						<tr>
 							<th>Name</th>
-							<th>Age</th>
-							<th>Type</th>
-							<th>See Pet's Logs</th>
-							<th>New Log</th>
-							<th>Delete Pet</th>
+                            <th>Log</th>
+                            <th>Reminder Date</th>
+							<th>Delete Log</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -94,7 +63,8 @@
 					</tbody>
 				</table>
 			</div>
-			<script src="js/entry.js" type="text/javascript"></script>
-<script src="js/pet.js" type="text/javascript"></script>
+            <script src="js/entry.js" type="text/javascript"></script>
+            <script src="js/pet.js" type="text/javascript"></script>
+
 </body>
 </html>

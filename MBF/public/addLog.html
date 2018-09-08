@@ -7,17 +7,44 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	 <!-- Required meta tags -->
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <!-- Bootstrap CSS -->
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	 <!-- css -->
+	 <link rel="stylesheet" type="text/css" href="../public/styles/styles.index.css">
 </head>
 
 <body>
-	<div class = "container">
-		<div class = "jumbotron">
-		<h1>Man's Best Friend</h1>
-		<a href = "../public/js/entry.html" class = "btn btn-danger btn-md">
-		<span class = "fa fa-eye"></span>Pet Journal Entries</a>
-		<a href = "../public/viewPet.html" class = "btn btn-danger btn-md"><span class ="fa fa-th-list"></span>View Pet Info</a>
-		</div>
-
+		<div class="container-fluid"><!-- spacer -->
+			<div style="height: 150px"></div>
+			
+			<!-- navbar -->
+			<nav class="row header navbar navbar-expand-lg fixed-top">
+				<img src="../public/assets/Logo_MBF.svg" class="logo">
+				<!-- menu for tablets/phones-->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- menu closed -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/addPet">Add Pet</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Add Log</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/logs">View Journal</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- navbar closed -->
 	<div class = "row">
 
 		<div class = "col-lg-12">
@@ -33,32 +60,32 @@
 					<div class="form-group">
 						<label for="category">Select Pet:</label>
 						<select class="custom-select" id="petPick">
-						  <option value="Butch">Butch</option>
-						  <option value="Princess">Princess</option>
+						  <option value="Butch">Mat</option>
+						  <option value="Princess">Sam</option>
 						  <option value="Duke">Duke</option>
 						</select>
 					  </div>
 				
 					<div class = "form-group">
 					<label for = "log">Log:</label>
-					<textarea class="form-control" type="text columns="30" rows="10"id = "name" placeholder = ""> </textarea>
+					<textarea class="form-control" type="text columns="30" rows="10"id = "logText" placeholder = ""> </textarea>
 				</div>
 				
             	<div class = "form-group">
 					<label for = "Date">Set a Reminder Date:</label>
-					<input type = "text"class="form-control" id = "date" placeholder = "">
+					<input type = "text"class="form-control" id = "reminderDate" placeholder = "">
 				</div>
 
 				
 			
-				<button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+				<button type="submit" class="btn btn-success submit btn-lg" id="log-form"> Submit </button>
 				</form>
 				</div>
 			</div>
 		</div>
 	</div>
 	</div>
-
-<script src="js/entry.js" type="text/javascript"></script>
+	<script src="js/entry.js" type="text/javascript"></script>
+	<script src="js/pet.js" type="text/javascript"></script>
 </body>
 </html>
