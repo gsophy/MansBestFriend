@@ -7,26 +7,53 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../public/styles/styles.index.css">
 </head>
 
 <body>
-	<div class = "container">
+	<!-- navbar -->
+	<nav class="row header navbar navbar-expand-lg fixed-top">
+		<img src="../public/assets/Logo_MBF.svg" class="logo">
+		<!-- menu for tablets/phones-->
+		<button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- menu closed -->
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link nav-copy" href="index.Allison.html">Home</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link nav-copy" href="/addPetEntry.html">Add Pet</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link nav-copy" href="/addLog.html">Add Journal</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- navbar closed -->
+
+	<!-- <div class = "container">
 		<div class = "jumbotron">
 		<h1>Man's Best Friend</h1>
 		<a href = "../public/???.html" class = "btn btn-danger btn-md">
 		<span class = "fa fa-eye"></span>Pet Journal Entries</a>
 		<a href = "../public/???.html" class = "btn btn-danger btn-md"><span class ="fa fa-th-list"></span>View Pet Info</a>
-		</div>
+		</div> -->
 
 	<div class = "row">
+		<div class="col-lg-2"></div>
 
-		<div class = "col-lg-12">
+		<div class = "col-lg-8 pet-body">
 
 			<div class = "card">
 				<div class = "card-header">
 				<h3 class = "card-title"><strong>Add Pet Journal Entry</strong></h3>
 				</div>
-
+				<!-- card body -->
 				<div class = "card-body">
 				<form action = "/api/entrys" method = "POST" role = "form">
 
@@ -40,12 +67,25 @@
 					<input type = "text"class="form-control" id = "name" placeholder = "">
 				</div>
 			
-				<button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+				<button type="submit" class="button-color btn btn-success submit btn-lg">Submit</button>
 				</form>
 				</div>
+				<!-- closes card body -->
 			</div>
+			<!-- closes card -->
 		</div>
+		<!-- closes columns -->
+
+		<div class="col-lg-2"></div>
+
 	</div>
-	</div>
+	<!-- closes row -->
+
+	<!-- footer -->
+	<footer class="row py-5 bg-dark my-footer">
+			<div class="container">
+				<p class="m-0 text-center text-white"> © 2018 Man's Best Friend. All rights reserved. </p>
+			</div>
+	</footer>
 </body>
 </html>
