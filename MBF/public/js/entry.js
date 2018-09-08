@@ -4,7 +4,8 @@ $(#add-btn).on("click", function (event) {
 
 var newPetJournal = {
 	name: $("#name").val().trim(),
-	journal: $("journal").val().trim()
+	journal: $("journal").val().trim(),
+	date: $("date").val().trim()
 };
 
 //send Ajax post request
@@ -15,5 +16,5 @@ $.post("/api-routes", newPetJournal)
 
 $("#name").val("");
 $("#journal").val("");
-
+console.log(data);
 });
