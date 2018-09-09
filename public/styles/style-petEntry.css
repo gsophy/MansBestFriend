@@ -1,0 +1,16 @@
+.logo{
+    width:11%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+
+
+.header {
+    height: 150px;
+    background-color: #58595B;
+}
+.pet-body {
+    padding-top: 150px;
+}
