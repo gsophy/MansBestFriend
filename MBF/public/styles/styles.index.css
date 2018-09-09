@@ -1,5 +1,5 @@
 .logo{
-    width:11%;
+    width:8%;
     height: auto;
     margin-left: 20px;
     margin-right: 20px
@@ -8,7 +8,31 @@
     height: 150px;
     background-color: #58595B;
 }
+
+.nav-copy {
+    color: white;
+}
+
+.nav-button{
+    color: white;
+}
+
 .jumbo {
+    padding-top: 150px;
     width: 100%;
     height: auto;
+}
+
+.pet-body {
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.button-color{
+    background-color: #63C29E
+}
+
+@media screen and (max-width: 991px) {
+    .header {height: 100px;}
+    .jumbo {padding-top: 100px;}
 }

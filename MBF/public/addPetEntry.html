@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Man's Best Friend</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../public/styles/styles.index.css">
+</head>
+
+<body>
+
+	 <!-- navbar -->
+	 <nav class="row header navbar navbar-expand-lg fixed-top">
+			<img src="../public/assets/Logo_MBF.svg" class="logo">
+			<!-- menu for tablets/phones-->
+			<button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+
+			<!-- menu closed -->
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link nav-copy" href="index.Allison.html">Home</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-copy" href="/addPetEntry.html">Add Pet</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-copy" href="/addLog.html">Add Journal</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- navbar closed -->
+
+		
+	<!-- <div class = "container">
+		<div class = "jumbotron">
+		<h1>Man's Best Friend</h1>
+		<a href = "../public/???.html" class = "btn btn-danger btn-md">
+		<span class = "fa fa-eye"></span>View All Pets</a>
+		<a href = "../public/???.html" class = "btn btn-danger btn-md"><span class ="fa fa-th-list"></span>View Pet Journal</a>
+	</div> -->
+
+	<div class = "row">
+		<div class= "col-lg-2 " ></div>
+			<!-- card -->
+			<div class = "card col-lg-8 pet-body">
+				
+				<!-- card header -->
+				<div class = "card-header">
+				<h3 class = "card-title"><strong>Add A Pet</strong></h3>
+				</div>
+				<!-- closes header -->
+
+				<!-- card body -->
+				<div class = "card-body">
+					<form action = "/api/pets" method = "POST" role = "form">
+
+					<div class = "form-group">
+						<label for = "">Name</label>
+						<input type = "text"class="form-control" id = "name" placeholder = "Pet Name">
+					</div>
+					
+					<div class = "form-group">
+						<label for = "">Age</label>
+						<input type = "text"class="form-control" id = "name" placeholder = "Pet Age">
+					</div>
+					
+					<div class = "form-group">
+						<label for = "">Type</label>
+						<input type = "text"class="form-control" id = "name" placeholder = "Pet Type">
+						<label for = "log">Log</label>
+						<textarea class="form-control" type="text columns="60" rows="3" id = "Journal" placeholder = "Enter Pet Journal Info Here"></textarea>
+					</div>
+					
+					<button type="submit" class="button-color btn btn-success submit btn-lg">Submit</button>
+					</form>
+			</div>
+			<!-- closes card body -->
+		</div>
+		<!-- closes card -->
+		<div class="col-lg-2"></div>
+	</div>	
+	<!-- closes row -->
+
+	<div class="row">
+		<div class="col-lg-12">
+				<!-- footer -->
+				<footer class="row py-5 bg-dark my-footer">
+						<div class="container">
+							<p class="m-0 text-center text-white"> © 2018 Man's Best Friend. All rights reserved. </p>
+						</div>
+				</footer>
+				<!-- closes footer -->
+			</div>	
+		<!-- closes columns	 -->
+	</div>		
+	<!-- closes row -->
+</body>
+</html>
